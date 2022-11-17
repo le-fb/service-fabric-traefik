@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.7.6\build\Microsoft.VisualStudio.Azure.Fabric.Application.props" Condition="Exists('..\..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.7.6\build\Microsoft.VisualStudio.Azure.Fabric.Application.props')" />
+  <Import Project="..\..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.7.7\build\Microsoft.VisualStudio.Azure.Fabric.Application.props" Condition="Exists('..\..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.7.7\build\Microsoft.VisualStudio.Azure.Fabric.Application.props')" />
   <PropertyGroup Label="Globals">
     <ProjectGuid>fb46565c-4607-46bc-8421-f5c277d33b62</ProjectGuid>
     <ProjectVersion>2.6</ProjectVersion>
     <MinToolsVersion>1.5</MinToolsVersion>
-    <SupportedMSBuildNuGetPackageVersion>1.7.6</SupportedMSBuildNuGetPackageVersion>
+    <SupportedMSBuildNuGetPackageVersion>1.7.7</SupportedMSBuildNuGetPackageVersion>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
   </PropertyGroup>
   <ItemGroup Label="ProjectConfigurations">
@@ -30,14 +30,14 @@
     <None Include="Scripts\Get-TraefikBinary.ps1" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ApplicationPackageRoot\TraefikPkg\Code\traefik.exe" />
+    <Content Include="ApplicationPackageRoot\TraefikPkg\Code\traefik" />
     <Content Include="ApplicationPackageRoot\TraefikPkg\Code\traefik.yaml" />
     <Content Include="ApplicationPackageRoot\TraefikPkg\Code\traefik-template.yaml" />
     <Content Include="ApplicationPackageRoot\TraefikPkg\ServiceManifest.xml" />
     <Content Include="ApplicationPackageRoot\ApplicationManifest.xml" />
     <Content Include="ApplicationPackageRoot\TraefikPkg\Code\dynConfig\dyn.yaml" />
     <Content Include="ApplicationPackageRoot\TraefikPkg\Code\setup.ps1" />
-    <Content Include="ApplicationPackageRoot\TraefikPkg\Fetcher.Code\server.exe" />
+    <Content Include="ApplicationPackageRoot\TraefikPkg\Fetcher.Code\server" />
     <Content Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
@@ -47,9 +47,9 @@
     </PackageOutputFolder>
   </PropertyGroup>
   <Import Project="$(ApplicationProjectTargetsPath)" Condition="Exists('$(ApplicationProjectTargetsPath)')" />
-  <Import Project="..\..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.7.6\build\Microsoft.VisualStudio.Azure.Fabric.Application.targets" Condition="Exists('..\..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.7.6\build\Microsoft.VisualStudio.Azure.Fabric.Application.targets')" />
+  <Import Project="..\..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.7.7\build\Microsoft.VisualStudio.Azure.Fabric.Application.targets" Condition="Exists('..\..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.7.7\build\Microsoft.VisualStudio.Azure.Fabric.Application.targets')" />
   <Target Name="ValidateMSBuildFiles" BeforeTargets="PrepareForBuild">
-    <Error Condition="!Exists('..\..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.7.6\build\Microsoft.VisualStudio.Azure.Fabric.Application.props')" Text="Unable to find the '..\..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.7.6\build\Microsoft.VisualStudio.Azure.Fabric.Application.props' file. Please restore the 'Microsoft.VisualStudio.Azure.Fabric.MSBuild' Nuget package." />
-    <Error Condition="!Exists('..\..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.7.6\build\Microsoft.VisualStudio.Azure.Fabric.Application.targets')" Text="Unable to find the '..\..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.7.6\build\Microsoft.VisualStudio.Azure.Fabric.Application.targets' file. Please restore the 'Microsoft.VisualStudio.Azure.Fabric.MSBuild' Nuget package." />
+    <Error Condition="!Exists('..\..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.7.7\build\Microsoft.VisualStudio.Azure.Fabric.Application.props')" Text="Unable to find the '..\..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.7.7\build\Microsoft.VisualStudio.Azure.Fabric.Application.props' file. Please restore the 'Microsoft.VisualStudio.Azure.Fabric.MSBuild' Nuget package." />
+    <Error Condition="!Exists('..\..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.7.7\build\Microsoft.VisualStudio.Azure.Fabric.Application.targets')" Text="Unable to find the '..\..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.7.7\build\Microsoft.VisualStudio.Azure.Fabric.Application.targets' file. Please restore the 'Microsoft.VisualStudio.Azure.Fabric.MSBuild' Nuget package." />
   </Target>
 </Project>
